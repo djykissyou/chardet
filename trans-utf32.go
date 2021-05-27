@@ -1,7 +1,7 @@
 package chardet
 
 import (
-	"code.google.com/p/go.text/transform"
+	"golang.org/x/text/transform"
 	. "unicode/utf8"
 )
 
