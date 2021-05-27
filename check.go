@@ -31,7 +31,7 @@ func Mostlike(data []byte) string {
 	if s := checkbom(data); s != "" {
 		return s
 	}
-	lb := check(data, []detect{&utf8{}, &gbk{}, &utf16BE{}, &utf16LE{}, &utf32BE{}, &utf32LE{}, &hzgb2312{}})
+	lb := check(data, []detect{&utf8{}, &utf16BE{}, &utf16LE{}, &utf32BE{}, &utf32LE{}, &hzgb2312{}})
 	if len(lb) > 0 {
 		x, y := -1, -100.0
 		for i, l := range lb {
