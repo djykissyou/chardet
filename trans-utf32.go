@@ -1,15 +1,16 @@
 package chardet
 
 import (
+	"golang.org/x/text/encoding"
 	"golang.org/x/text/transform"
 	. "unicode/utf8"
 )
 
 // 提供给用户使用的并发安全的编解码器接口
-var (
-	UTF32BE = &utf32be{}
-	UTF32LE = &utf32le{}
-)
+var UTF32BE encoding.Encoding
+//UTF32BE = &utf32be{}
+var	UTF32LE encoding.Encoding
+//UTF32LE = &utf32le{}
 
 type u32bt8 struct {
 	hold []byte
